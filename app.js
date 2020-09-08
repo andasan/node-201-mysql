@@ -22,4 +22,5 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, ()=> console.log(`Server started at port ${PORT}`));
